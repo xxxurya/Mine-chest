@@ -1,0 +1,12 @@
+services:
+  - name: frontend
+    type: web
+    repo: https://github.com/xxxurya/Mine-chest.git
+    branch: master
+    dockerfilePath: Dockerfile
+    dockerCommand: npm run dev
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_API_URL
+        value: https://api-your-app.onrender.com
