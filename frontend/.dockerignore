@@ -1,0 +1,41 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Tests
+coverage
+.nyc_output
+tests
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Development
+*.log
+*.swp
+*.swo
+.DS_Store
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Documentation
+README.md
+docs
+
+# Misc
+*.tgz
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# Build outputs (these are copied separately)
+dist
