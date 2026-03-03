@@ -4,7 +4,7 @@ services:
     repo: https://github.com/xxxurya/Mine-chest.git
     branch: master
     rootDir: backend
-    dockerfilePath: Dockerfile
+    dockerfilePath: backend/Dockerfile
     dockerCommand: npm start
     envVars:
       - key: NODE_ENV
@@ -21,7 +21,7 @@ services:
     repo: https://github.com/xxxurya/Mine-chest.git
     branch: master
     rootDir: frontend
-    dockerfilePath: Dockerfile
+    dockerfilePath: frontend/Dockerfile
     dockerCommand: npm run dev
     envVars:
       - key: NODE_ENV
