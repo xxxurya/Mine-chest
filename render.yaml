@@ -1,0 +1,29 @@
+services:
+  - name: api
+    type: web
+    repo: https://github.com/xxxurya/Mine-chest.git
+    branch: master
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+
+  - name: frontend
+    type: web
+    repo: https://github.com/xxxurya/Mine-chest.git
+    branch: master
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: npx serve dist -l $PORT
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_API_URL
+        value: https://api-your-app.onrender.com
+    staticPublish: frontend/dist
